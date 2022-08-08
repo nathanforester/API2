@@ -32,13 +32,13 @@ def index():
 def date():
     formData = request.form.get('date')
     formData = str(formData)
-    birthDate = requests.post('http://converter:5001/date/' + formData)
+    birthDate = requests.post('http:</>' + formData)
     print(birthDate.text, file=sys.stderr)
     print(birthDate.text, file=sys.stdout)
-    prime = requests.post('http://prime:5002/date/' + formData)
+    prime = requests.post('http:</>' + formData)
     print(prime.text, file=sys.stderr)
     print(prime.text, file=sys.stdout)
     print(formData, file=sys.stderr)
     print(formData, file=sys.stdout)
-    return render_template('convertPrime.html', formData=formData, birthDate=birthDate.text, prime=prime.text)
+    return render_template('convertPrime.html', formData=formData, birthDate=</>, prime=</>)
 

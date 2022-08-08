@@ -9,18 +9,12 @@ services:
     deploy:
       replicas: 1
   converter:
-    image: nathanforester321/converter:latest
-    build: ./converter
+    image: </>
+    build: </>
     ports:
         - target: 5001
-          published: 5001
+          published: </> 
     deploy:
       replicas: 1
   prime:
-    image: nathanforester321/prime:latest
-    build: ./prime
-    ports:
-        - target: 5002
-          published: 5002
-    deploy:
-      replicas: 1
+    </>
