@@ -13,14 +13,11 @@ def prime(ageInMonths):
         ageMonths = int(float(ageInMonths))
     except ValueError:
         return "ValueError: please enter a number"
-    # ageMonths = int(ageMonths)
     if ageMonths > 1:
         if ageMonths % 2 == 1 or ageMonths == 2:
             prime = "yes, you are PRIME"
-        elif ageMonths % 2 != 1:
+        elif ageMonths % 2 == 0:
             prime = "No, you are COMPOSITE"
-        else:
-            prime = "You do not appear to exist"
     elif ageMonths == 1:
             prime = "neither PRIME nor COMPOSITE"
     else:
