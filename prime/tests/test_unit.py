@@ -31,5 +31,9 @@ class TestPrime(unittest.TestCase):
 
     def test_values(self):
 
-        self.assertEqual(prime(1986), 'No, you are COMPOSITE', msg='Equal')
-        </>
+        self.assertEqual(prime(1986), 'composite', msg='Equal')
+        #</>
+
+        
+        
+        
