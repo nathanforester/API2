@@ -34,6 +34,7 @@ class TestPrime(unittest.TestCase):
         self.assertEqual(prime(1986), 'composite', msg='Equal')
         #</>
 
+
         
         
         
