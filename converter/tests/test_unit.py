@@ -30,5 +30,5 @@ class TestConvert(unittest.TestCase):
 
     def test_values(self):
 
-       self.assertEqual((1986), '444', msg='Equal')   
+       self.assertEqual((0), 'value entered is less than one month', msg='Equal')   
         
