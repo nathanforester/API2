@@ -29,5 +29,6 @@ class TestInit(TestCase):
 class TestConvert(unittest.TestCase):
 
     def test_values(self):
+
+       self.assertEqual((1986), '444', msg='Equal')   
         
-        #</>
