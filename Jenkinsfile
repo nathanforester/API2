@@ -16,17 +16,17 @@ pipeline {
         //         sh 'sudo pytest /home/jenkins/.jenkins/workspace/FlaskApp/'
         //     }
         // }
-        stage('Building') {
-            steps {
-                sh 'sudo docker-compose build'
-            }
-        }
-        stage('Deploying') {
+        stage('Unit Tests') {
             steps {
                 sh '''
-                    sudo docker-compose -f /home/ubuntu/APIPrimeAge/docker-compose.yaml down                  
-                    sudo docker-compose -f /home/ubuntu/APIPrimeAge/docker-compose.yaml build
-                '''
+                      python3 -m pytest ./converter/tests/test_unit.py
+                      python3 -m pytest ./prime/tests/test_unit.py
+                   '''
+            }
+        }
+        stage('Integration Test') {
+            steps {
+                sh 'python3 -m pytest ./main/tests/test_unit.py'
             }
         }
     }
