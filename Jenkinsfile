@@ -31,7 +31,7 @@ pipeline {
 
         stage('docker compose') {
             steps {
-                sh 'docker system prune -a -f'
+                sh 'docker-compose build'
             }
         }
         
