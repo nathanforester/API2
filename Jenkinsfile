@@ -38,11 +38,7 @@ pipeline {
         stage('connect via ssh deploy server and run app') {
             steps {
                 sh '''
-                   #!/bin/bash
-                   ssh -i /home/jenkins/.ssh/myKey -o StrictHostKeyChecking=no ubuntu@172.31.33.237 << EOF
-                   docker system prune -a -f
-                   docker-compose -f /home/ubuntu/API2/docker-compose.yaml up -d
-                   << EOF
+                   <\>
                 '''
             }
         }
