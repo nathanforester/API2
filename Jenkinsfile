@@ -23,6 +23,17 @@ pipeline {
                    '''
             }
         }
+        stage('docker prune') {
+            steps {
+                sh 'docker system prune -a -f'
+            }
+        }
+
+        stage('docker compose') {
+            steps {
+                sh 'docker system prune -a -f'
+            }
+        }
         
     }
 }
